@@ -10,18 +10,18 @@ st.write("Usa los botones para cambiar la forma del corazón ajustando el valor 
 
 # Inicializar k en session_state
 if "k" not in st.session_state:
-    st.session_state.k = 1.0  # Valor inicial
+    st.session_state.k = 0.0  # Valor inicial en 0
 
 # Botones para modificar k
 col1, col2, col3 = st.columns([1, 2, 1])  # Distribución del layout
 
 with col1:
     if st.button("⬅ Disminuir k"):
-        st.session_state.k = max(0.0, st.session_state.k - 0.1)
+        st.session_state.k = max(0.0, st.session_state.k - 5)  # Disminuir en 5
 
 with col3:
     if st.button("Aumentar k ➡"):
-        st.session_state.k = min(5.0, st.session_state.k + 0.1)
+        st.session_state.k = min(50.0, st.session_state.k + 5)  # Aumentar en 5
 
 # Obtener valor actual de k
 k = st.session_state.k
@@ -44,7 +44,6 @@ st.pyplot(fig)
 
 st.write(f"Valor actual de k: **{k:.1f}**")
 st.write("Espero que te guste 💕")
-
 
 
 
