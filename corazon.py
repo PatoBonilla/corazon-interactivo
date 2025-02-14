@@ -9,7 +9,7 @@ st.title("💖 Feliz día de San Valentín 💖")
 st.write("Usa el control deslizante para cambiar el valor de k, que representa cómo los altos y bajos momentos nos unen para dar un resultado final.")
 
 # Slider para modificar k con aumento de 1 en 1
-k = st.slider("Ajusta el valor de k", min_value=0, max_value=260, value=0, step=1)
+k = st.slider("Ajusta el valor de k", min_value=0, max_value=100, value=0, step=1)
 
 # Generar coordenadas del corazón
 x = np.linspace(-2, 2, 400)
@@ -41,5 +41,3 @@ st.pyplot(fig)
 
 st.write(f"Valor actual de k: **{k}**")
 st.write("Deja tu ego y seamos felices hoy 💖")
-
-
